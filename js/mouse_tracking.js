@@ -1,6 +1,18 @@
 
 //user name input
- var username = prompt("请输入您的ID：");
+// var username = prompt("请输入您的ID：");
+
+// 尝试从本地存储中获取用户ID
+var username = localStorage.getItem('username');
+
+// 如果本地存储中不存在用户ID，则提示用户输入新的ID
+if (!username) {
+    // 用户第一次打开页面时，提示输入ID
+    username = prompt("请输入您的ID：");
+    
+    // 将用户输入的ID存储在本地存储中
+    localStorage.setItem('username', username);
+}
 
         
         // define database url
