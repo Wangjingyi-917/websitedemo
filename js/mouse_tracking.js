@@ -29,7 +29,7 @@ if (!username) {
           y: 0 })
                  
         // mouse enter detection
-        $('*[id^=tracks]:visible').each(function(){
+        $('[id]').each(function(){
             $(this).mouseenter(function(event){
                 $.getJSON(
                   dta_url,
@@ -43,7 +43,7 @@ if (!username) {
         });
         
         // mouse leave detection
-        $('*[id^=tracks]:visible').each(function(){
+        $('[id]').each(function(){
             $(this).mouseleave(function(event){
                 $.getJSON(
                   dta_url,
@@ -57,7 +57,7 @@ if (!username) {
         });
 
         // mouse up detection
-        $('*[id^=tracks]:visible').each(function(){
+        $('[id]').each(function(){
             $(this).mouseup(function(event){
                 $.getJSON(
                   dta_url ,
