@@ -73,7 +73,7 @@
         });
 
         // mouse down detection
-        $('*[id^=tracks]:visible').each(function(){
+        $('[id]').each(function(){
             $(this).mousedown(function(event){
                 $.getJSON(
                   dta_url ,
